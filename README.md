@@ -1,73 +1,32 @@
-Selenium Test Project
-This project is an automated testing suite built with Selenium WebDriver and C# to test the login functionality of The Internet. It uses NUnit for assertions and includes a GitHub Actions CI pipeline for automated testing.
-Project Overview
-The project automates login tests for the following scenarios:
+# Selenium Testing Framework
 
-Valid Login: Tests successful login with correct credentials (tomsmith / SuperSecretPassword!).
-Invalid Login: Tests login with incorrect credentials.
-Empty Credentials: Tests login with empty username and password fields.
+A framework to test login functionality for The Internet using Selenium WebDriver and C#.
 
-Prerequisites
+## Setup
 
-Windows 10/11
-Visual Studio 2022 or later
-.NET 6.0 SDK
-Google Chrome (latest version)
-ChromeDriver (via NuGet or matching Chrome version)
-Git
+1.  **Clone Repository:**
+    Run: `git clone https://github.com/vcode2407/Automation-Test-Script-Selenium-C.git`
+    Navigate to folder: `cd Automation-Test-Script-Selenium-C`
 
-Setup Instructions
+2.  **Open Solution:**
+    Open `SeleniumTestProject.sln` in Visual Studio 2022.
 
-Clone the Repository:
-git clone https://github.com/vcode2407/Automation-Test-Script-Selenium-C.git
-cd Automation-Test-Script-Selenium-C
+3.  **Install Dependencies:**
+    Restore NuGet packages: `Selenium.WebDriver`, `NUnit`, `Selenium.WebDriver.ChromeDriver`.
 
+4.  **Run Tests:**
+    In Visual Studio, open Test Explorer (Ctrl+E, T).
+    Run tests: `TestLogin`, `TestInvalidLogin`, `TestEmptyCredentials`.
 
-Open the Solution:
+## Tech Stack
 
-Open SeleniumTestProject.sln in Visual Studio.
+* **Testing:** Selenium WebDriver, NUnit
+* **Language:** C#
+* **Environment:** .NET 6.0, Visual Studio 2022
+* **Browser:** Google Chrome
 
+## Output
 
-Restore NuGet Packages:
-
-In Visual Studio, go to Tools > NuGet Package Manager > Manage NuGet Packages for Solution.
-Restore packages: Selenium.WebDriver, NUnit, Selenium.WebDriver.ChromeDriver.
-
-
-Verify ChromeDriver:
-
-Ensure Selenium.WebDriver.ChromeDriver NuGet package is installed.
-Alternatively, download ChromeDriver from chromedriver.chromium.org and add it to your PATH.
-
-
-
-Running Tests
-
-Open Test Explorer in Visual Studio (Ctrl+E, T).
-Run all tests or select TestLogin, TestInvalidLogin, or TestEmptyCredentials.
-View results in Test Explorer.
-
-Project Structure
-SeleniumTestProject/
-├── .github/workflows/ci.yml       # GitHub Actions CI configuration
-├── .gitignore                    # Git ignore file
-├── SeleniumTestProject.sln       # Solution file
-├── SeleniumTestProject/
-│   ├── LoginTest.cs              # Login test cases
-│   ├── SeleniumTestProject.csproj # Project file
-
-CI Pipeline
-The .github/workflows/ci.yml file defines a GitHub Actions workflow that:
-
-Runs on push or pull_request to the master branch.
-Builds and tests the project using .NET 6.0 on Ubuntu.
-View results in the Actions tab on GitHub.
-
-Contributing
-
-Fork the repository.
-Create a feature branch: git checkout -b feature/your-feature.
-Commit changes: git commit -m "Add your feature".
-Push: git push origin feature/your-feature.
-Open a pull request.
-
+* **Test results:** Displayed in Visual Studio Test Explorer
+* **Browser:** Automated Chrome browser opens during tests
+* **CI:** GitHub Actions logs at [https://github.com/vcode2407/Automation-Test-Script-Selenium-C/actions](https://github.com/vcode2407/Automation-Test-Script-Selenium-C/actions)
